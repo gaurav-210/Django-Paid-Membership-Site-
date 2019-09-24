@@ -1,12 +1,16 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<div class="container">
+{% load crispy_forms_tags %}
+<div class="container ">
 <h1>Login</h1>
+
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
+  {{ form|crispy}}
+
+  <button type="submit" class="btn btn-success">Login</button>
 </form>
 </div>
-{% endblock %}
- 
+
+
+  {% endblock %}

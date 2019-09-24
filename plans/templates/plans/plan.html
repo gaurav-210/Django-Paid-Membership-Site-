@@ -1,7 +1,11 @@
 {% extends 'plans/base.html' %}
 {% block content %}
+{% load staticfiles %}
+
 <div class="container">
-<h1>{{ plan.title}}</h1>
-<p>{{ plan.text }}</p>
+        <h1>{{ plan.title}}</h1>
+ <img src="{% static 'd.jpg' %}" style="margin-left:150px; margin-top:10px; margin-bottom:10px;">
+
+<p class="text-justify">{{ plan.text }}</p>
 </div>
 {% endblock %}
